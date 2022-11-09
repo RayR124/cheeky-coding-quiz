@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 10px;
   box-sizing: border-box;
 }
 
@@ -24,12 +24,13 @@ li {
 
 .intro h1 {
   margin: 20px;
-  font-size: x-large;
+  font-size: 75px;
 }
 
 .intro p {
   margin: 20px;
-  font-size: large;
+  font-size: x-large;
+  padding: 25px;
   font-weight: 400;
 }
 
