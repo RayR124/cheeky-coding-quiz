@@ -3,13 +3,7 @@ const viewScores = document.querySelector(".highscores");
 const intro = document.querySelector(".intro");
 const start = document.querySelector(".start");
 const quiz = document.querySelector(".quiz");
-
-startBtn.addEventListener("click", function () {
-  startQuiz();
-  currentQuestion = 1;
-  loadQuestion(questions.currentQuestion);
-  document.querySelector(intro).classList.add("hidden");
-});
+const timerEl = document.querySelector(".seconds");
 
 function startQuiz() {
   loadQuestion(questions);
@@ -19,21 +13,24 @@ function startQuiz() {
 const timer = {
   timeRemaining: 60,
   interval: undefined,
-
-  // This function starts the timer when the Quiz Starts.
-  start(time) {
-    this.timeRemaining = time;
-    const timerInterval = setInterval(() => {
-      this.interval = timerInterval;
-      this.timeRemaining--;
-      timerEl.textContent = this.timeRemaining;
-      if (this.timeRemaining < 1) {
-        this.stopTimer();
-        endQuiz();
-      }
-    }, 1000);
-  },
 }
+
+// This starts the timer when the "Start Quiz" button is clicked.
+  function startTimer() {
+    const seconds = 60;
+    function tick() {
+        let counter = document.getElementById("seconds");
+        seconds--;
+        counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+        if( seconds > 0 ) {
+            setTimeout(tick, 1000);
+        } else {
+            alert("Time's Up!");
+            endQuiz();
+        }
+    }
+    tick();
+  }
 
 // This allows the timer to be decreased if the user answers a question incorrectly.
 decreasetime();
@@ -43,18 +40,10 @@ decreasetime();
 
 // This stops the timer if the time remaining falls below zero, or the last question has been answered.
 stopTimer(); {
-  clearInterval(this.interval);
+  clearInterval(timerEl);
 }
 
-// This starts the timer when the "Start Quiz" button is clicked.
-function startTimer() {
-  timer.start(60);
-  initials.textContent = '';
-  initials.value = '';
-};
-
 function endQuiz() {
-  quizScore.textContent = timer.timeRemaining;
   timer.stopTimer();
 };
 
@@ -62,8 +51,6 @@ function loadQuestion() {
   currentQuestion = 1;
   document.querySelector(questions) = "";
 }
-
-let currentQuestion = 1;
 
   const questions = new Map([
     [1, [["question", "Which of the following can not be stored in Arrays?"],
@@ -113,6 +100,8 @@ let currentQuestion = 1;
       ],],
   ]);
 
+  let currentQuestion = 1;
+
 function checkAnswer(event) {
   const element = event.target;
   if (element.tagName === "BUTTON") {
@@ -151,3 +140,11 @@ function showHighScores() {
     document.querySelector(".highscores").appendChild(score);
   }
 };
+
+startBtn.addEventListener("click", function () {
+  startQuiz();
+  countdown();
+  startTimer();
+  loadQuestion(questions.currentQuestion);
+  document.querySelector(intro).classList.add("hidden");
+});

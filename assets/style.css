@@ -25,6 +25,7 @@ li {
 .intro h1 {
   margin: 20px;
   font-size: 75px;
+  color: rgb(32, 6, 226);
 }
 
 .intro p {
@@ -58,6 +59,7 @@ li {
   justify-content: left;
   text-align: left;
   cursor: pointer;
+  color: red;
 }
 
 .time {
