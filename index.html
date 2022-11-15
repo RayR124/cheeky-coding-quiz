@@ -23,90 +23,90 @@
                 your score
                 AND reduce your remaining time by 10 seconds! Good Luck!
             </p>
-            <button class="start-btn">Start Quiz</button>
-            <form action="questions">
+            <button onclick="showQ1()" class="start-btn">Start Quiz</button>
         </section>
-        <section hidden class="q1">
-            <div>
-                1. Which of the following can not be stored in Arrays? (answer is D)
+        <form action="questions">
+            <section hidden class="q1">
                 <div>
-                    <input type="checkbox" id="A" name="A" value="answerA">
-                    <label for="A"> A. "Numbers and Strings"</label><br>
-                    <input type="checkbox" id="B" name="B" value="answerB">
-                    <label for="B"> B. "Other Arrays"</label><br>
-                    <input type="checkbox" id="C" name="C" value="answerC">
-                    <label for="C"> C. "Booleans"</label><br>
-                    <input type="checkbox" id="D" name="D" value="answerD">
-                    <label for="D"> D. "All of the above can be store in Arrays"</label><br>
-                    <input class="submit" type="submit" value="Submit">
+                    1. Which of the following can not be stored in Arrays? (answer is D)
+                    <div>
+                        <input type="checkbox" id="A" name="A" value="answerA">
+                        <label for="A"> A. "Numbers and Strings"</label><br>
+                        <input type="checkbox" id="B" name="B" value="answerB">
+                        <label for="B"> B. "Other Arrays"</label><br>
+                        <input type="checkbox" id="C" name="C" value="answerC">
+                        <label for="C"> C. "Booleans"</label><br>
+                        <input type="checkbox" id="D" name="D" value="answerD">
+                        <label for="D"> D. "All of the above can be store in Arrays"</label><br>
+                        <input class="submit" type="submit" value="Submit" onclick="showQ2()">
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section hidden class="q2">
-            <div>
-                2. When assigned to variables, string values must be enclosed within what? (answer is C)
+            </section>
+            <section hidden class="q2">
                 <div>
-                    <input type="checkbox" id="A" name="A" value="answerA">
-                    <label for="A"> A. "Commas"</label><br>
-                    <input type="checkbox" id="B" name="B" value="answerB">
-                    <label for="B"> B. "Curly Brackets"</label><br>
-                    <input type="checkbox" id="C" name="C" value="answerC">
-                    <label for="C"> C. "Quotation Marks"</label><br>
-                    <input type="checkbox" id="D" name="D" value="answerD">
-                    <label for="D"> D. "Parenthises"</label><br>
-                    <input class="submit" type="submit" value="Submit">
+                    2. When assigned to variables, string values must be enclosed within what? (answer is C)
+                    <div>
+                        <input type="checkbox" id="A" name="A" value="answerA">
+                        <label for="A"> A. "Commas"</label><br>
+                        <input type="checkbox" id="B" name="B" value="answerB">
+                        <label for="B"> B. "Curly Brackets"</label><br>
+                        <input type="checkbox" id="C" name="C" value="answerC">
+                        <label for="C"> C. "Quotation Marks"</label><br>
+                        <input type="checkbox" id="D" name="D" value="answerD">
+                        <label for="D"> D. "Parenthises"</label><br>
+                        <input class="submit" type="submit" value="Submit" onclick="showQ3()">
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section hidden class="q3">
-            <div>
-                3. Which of the following is NOT a commonly used Data Type? (answer is A)
+            </section>
+            <section hidden class="q3">
                 <div>
-                    <input type="checkbox" id="A" name="A" value="answerA">
-                    <label for="A"> A. "Alerts"</label><br>
-                    <input type="checkbox" id="B" name="B" value="answerB">
-                    <label for="B"> B. "Booleans"</label><br>
-                    <input type="checkbox" id="C" name="C" value="answerC">
-                    <label for="C"> C. "Strings"</label><br>
-                    <input type="checkbox" id="D" name="D" value="answerD">
-                    <label for="D"> D. "Numbers"</label><br>
-                    <input class="submit" type="submit" value="Submit">
+                    3. Which of the following is NOT a commonly used Data Type? (answer is A)
+                    <div>
+                        <input type="checkbox" id="A" name="A" value="answerA">
+                        <label for="A"> A. "Alerts"</label><br>
+                        <input type="checkbox" id="B" name="B" value="answerB">
+                        <label for="B"> B. "Booleans"</label><br>
+                        <input type="checkbox" id="C" name="C" value="answerC">
+                        <label for="C"> C. "Strings"</label><br>
+                        <input type="checkbox" id="D" name="D" value="answerD">
+                        <label for="D"> D. "Numbers"</label><br>
+                        <input class="submit" type="submit" value="Submit" onclick="showQ4()">
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section hidden class="q4">
-            <div>
-                4. Which of the following conditions are used to enclose an IF/ELSE statement? (answer is B)
+            </section>
+            <section hidden class="q4">
                 <div>
-                    <input type="checkbox" id="A" name="A" value="answerA">
-                    <label for="A"> A. "Square Brackets"</label><br>
-                    <input type="checkbox" id="B" name="B" value="answerB">
-                    <label for="B"> B. "Parenthises"</label><br>
-                    <input type="checkbox" id="C" name="C" value="answerC">
-                    <label for="C"> C. "Curly Brackets"</label><br>
-                    <input type="checkbox" id="D" name="D" value="answerD">
-                    <label for="D"> D. "Quotation Marks"</label><br>
-                    <input class="submit" type="submit" value="Submit">
+                    4. Which of the following conditions are used to enclose an IF/ELSE statement? (answer is B)
+                    <div>
+                        <input type="checkbox" id="A" name="A" value="answerA">
+                        <label for="A"> A. "Square Brackets"</label><br>
+                        <input type="checkbox" id="B" name="B" value="answerB">
+                        <label for="B"> B. "Parenthises"</label><br>
+                        <input type="checkbox" id="C" name="C" value="answerC">
+                        <label for="C"> C. "Curly Brackets"</label><br>
+                        <input type="checkbox" id="D" name="D" value="answerD">
+                        <label for="D"> D. "Quotation Marks"</label><br>
+                        <input class="submit" type="submit" value="Submit" onclick="showQ5()">
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section hidden class="q5">
-            <div>
-                5. What command is used to add a comment out to a single line of code in JavaScript? (answer is B)
+            </section>
+            <section hidden class="q5">
                 <div>
-                    <input type="checkbox" id="A" name="A" value="answerA">
-                    <label for="A"> A. /* comment */</label><br>
-                    <input type="checkbox" id="B" name="B" value="answerB">
-                    <label for="B"> B. // comment</label><br>
-                    <input type="checkbox" id="C" name="C" value="answerC">
-                    <label for="C"> C. {* comment *}</label><br>
-                    <input type="checkbox" id="D" name="D" value="answerD">
-                    <label for="D"> D. // comment //</label><br>
-                    <input class="submit" type="submit" value="End Quiz">
+                    5. What command is used to add a comment out to a single line of code in JavaScript? (answer is B)
+                    <div>
+                        <input type="checkbox" id="A" name="A" value="answerA">
+                        <label for="A"> A. /* comment */</label><br>
+                        <input type="checkbox" id="B" name="B" value="answerB">
+                        <label for="B"> B. // comment</label><br>
+                        <input type="checkbox" id="C" name="C" value="answerC">
+                        <label for="C"> C. {* comment *}</label><br>
+                        <input type="checkbox" id="D" name="D" value="answerD">
+                        <label for="D"> D. // comment //</label><br>
+                        <input class="submit" type="submit" value="End Quiz" onclick="stopQuiz()" onclick="stopTimer()">
+                    </div>
                 </div>
-                </form>
-            </div>
-        </section>
+            </section>
+        </form>
     </main>
     <script src="./assets/myscript.js"></script>
 </body>

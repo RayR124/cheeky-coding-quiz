@@ -20,7 +20,6 @@ li {
   margin: 20px;
   justify-content: center;
   text-align: center;
-  display: visible;
 }
 
 .intro h1 {
@@ -93,23 +92,33 @@ li {
 
 
 .q1 {
-  display: none;
+  font-size: 75px;
+  justify-content: center;
+  text-align: center;
 }
 
 .q2 {
-  display: none;
+  font-size: 75px;
+  justify-content: center;
+  text-align: center;
 }
 
 .q3 {
-  display: none;
+  font-size: 75px;
+  justify-content: center;
+  text-align: center;
 }
 
 .q4 {
-  display: none;
+  font-size: 75px;
+  justify-content: center;
+  text-align: center;
 }
 
 .q5 {
-  display: none;
+  font-size: 75px;
+  justify-content: center;
+  text-align: center;
 } 
 
 .submit {
