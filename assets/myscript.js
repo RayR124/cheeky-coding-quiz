@@ -2,6 +2,7 @@ const startBtn = document.querySelector(".start-btn");
 const endQuizBtn = document.querySelector(".endQuiz")
 const viewScores = document.querySelector(".highscores");
 const intro = document.querySelector(".intro");
+const outtro = document.querySelector(".outtro");
 const start = document.querySelector(".start");
 const quiz = document.querySelector(".quiz");
 const timer = document.querySelector(".seconds");
@@ -38,8 +39,12 @@ function stopTimer() {
 }
 
 function endQuiz() {
-  timer.stopTimer();
+  stopTimer();
 };
+
+function decreaseTime() {
+  timer -= 10;
+}
 
 // This starts the timer, hides the intro page, and displayes the first question.
 startBtn.addEventListener("click", myFunction);
@@ -57,10 +62,14 @@ function showQ1() {
 submit1.addEventListener("click", showQ2);
 
 function showQ2() {
-  if (document.getElementById("A1", "B1", "C1").checked) {
+  const a1=document.getElementById("A1");
+  const b1=document.getElementById("B1");
+  const c1=document.getElementById("C1");
+  const d1=document.getElementById("D1");
+  if (a1.checked || b1.checked || c1.checked) {
     alert("ERRT! -10 seconds! Try Again!");
     decreaseTime();
-  } else if (document.getElementById("").checked) {
+  } else if (!a1.checked && !b1.checked && !c1.checked && !d1.checked) {
     alert("Hey! You gotta check at least 1 answer!");
   } else {
     q2.classList.remove("hidden");
@@ -72,10 +81,14 @@ function showQ2() {
 submit2.addEventListener("click", showQ3);
 
 function showQ3() {
-  if (document.getElementById("A2", "B2", "D2").checked) {
+  const a2=document.getElementById("A2");
+  const b2=document.getElementById("B2");
+  const d2=document.getElementById("D2");
+  const c2=document.getElementById("C2");
+  if (a2.checked || b2.checked || d2.checked) {
     alert("ERRT! -10 seconds! Try Again!");
     decreaseTime();
-  } else if (document.getElementById("").checked) {
+  } else if (!a2.checked && !b2.checked && !c2.checked && !d2.checked) {
     alert("Hey! You gotta check at least 1 answer!");
   } else {
     q3.classList.remove("hidden");
@@ -87,10 +100,14 @@ function showQ3() {
 submit3.addEventListener("click", showQ4);
 
 function showQ4() {
-  if (document.getElementById("B3", "C3", "D3").checked) {
+  const b3=document.getElementById("B3");
+  const c3=document.getElementById("C3");
+  const d3=document.getElementById("D3");
+  const a3=document.getElementById("A3");
+  if (b3.checked || c3.checked || d3.checked) {
     alert("ERRT! -10 seconds! Try Again!");
     decreaseTime();
-  } else if (document.getElementById("").checked) {
+  } else if (!a3.checked && !b3.checked && !c3.checked && !d3.checked) {
     alert("Hey! You gotta check at least 1 answer!");
   } else {
     q4.classList.remove("hidden");
@@ -102,10 +119,14 @@ function showQ4() {
 submit4.addEventListener("click", showQ5);
 
 function showQ5() {
-  if (document.getElementById("A4", "C4", "D4").checked) {
+  const a4=document.getElementById("A4");
+  const c4=document.getElementById("C4");
+  const d4=document.getElementById("D4");
+  const b4=document.getElementById("B4");
+  if (a4.checked || c4.checked || d4.checked) {
     alert("ERRT! -10 seconds! Try Again!");
     decreaseTime();
-  } else if (document.getElementById("").checked) {
+  } else if (!a4.checked && !b4.checked && !c4.checked && !d4.checked) {
     alert("Hey! You gotta check at least 1 answer!");
   } else {
     q5.classList.remove("hidden");
@@ -115,14 +136,19 @@ function showQ5() {
 }
 
 function finalQ() {
-  if (document.getElementById("A5", "C5", "D5").checked) {
+  const a5=document.getElementById("A5");
+  const c5=document.getElementById("C5");
+  const d5=document.getElementById("D5");
+  const b5=document.getElementById("B5");
+  if (a5.checked || c5.checked || d5.checked) {
     alert("ERRT! -10 seconds! Try Again!");
     decreaseTime();
-  } else if (document.getElementById("").checked) {
+  } else if (!a5.checked && !b5.checked && !c5.checked && !d5.checked) {
     alert("Hey! You gotta check at least 1 answer!");
   } else {
     alert("Hey! You did it!!!");
     stopTimer();
+    outtro.classList.remove("hidden");
   }
 }
 
