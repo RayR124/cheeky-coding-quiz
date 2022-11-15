@@ -15,17 +15,6 @@ const submit2 = document.querySelector(".submit2")
 const submit3 = document.querySelector(".submit3")
 const submit4 = document.querySelector(".submit4")
 
-// This is the Timer Object 
-const timerEl = {
-  timeRemaining: 60,
-  interval: undefined,
-}
-
-// This allows the timer to be decreased if the user answers a question incorrectly.
-function decreaseTime() {
-  timerEl.timeRemaining -= 10;
-}
-
 // This starts the timer when the "Start Quiz" button is clicked.
 function startTimer() {
   let seconds = 60;
@@ -76,6 +65,7 @@ function showQ2() {
   } else {
     q2.classList.remove("hidden");
     alert("Hey! You got it right!");
+    q1.classList.add("hidden");
   }
 }
 
@@ -90,6 +80,7 @@ function showQ3() {
   } else {
     q3.classList.remove("hidden");
     alert("Hey! You got it right!");
+    q2.classList.add("hidden");
   }
 }
 
@@ -104,6 +95,7 @@ function showQ4() {
   } else {
     q4.classList.remove("hidden");
     alert("Hey! You got it right!");
+    q3.classList.add("hidden");
   }
 }
 
@@ -118,6 +110,7 @@ function showQ5() {
   } else {
     q5.classList.remove("hidden");
     alert("Hey! You got it right!");
+    q4.classList.add("hidden");
   }
 }
 

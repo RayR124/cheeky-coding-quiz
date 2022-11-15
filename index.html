@@ -25,88 +25,103 @@
             </p>
             <button onclick="showQ1()" class="start-btn">Start Quiz</button>
         </section>
-        <form action="questions">
-            <section hidden class="q1">
+        <section class="q1" hidden>
+            <form action="questions">
                 <div>
-                    1. Which of the following can not be stored in Arrays? (answer is D)
-                    <div>
+                    1. Which of the following can not be stored in Arrays?
+                    <div class="answers">
                         <input type="radio" id="A1" name="A" value="answerA">
-                        <label for="A"> A. "Numbers and Strings"</label><br>
-                        <input type="radio" id="B1" name="B" value="answerB">
-                        <label for="B"> B. "Other Arrays"</label><br>
-                        <input type="radio" id="C1" name="C" value="answerC">
-                        <label for="C"> C. "Booleans"</label><br>
-                        <input type="radio" id="D1" name="D" value="answerD">
-                        <label for="D"> D. "All of the above can be store in Arrays"</label><br>
+                        <label for="A1"> A. "Numbers and Strings"</label><br>
+                        <input type="radio" id="B1" name="A" value="answerB">
+                        <label for="B1"> B. "Other Arrays"</label><br>
+                        <input type="radio" id="C1" name="A" value="answerC">
+                        <label for="C1"> C. "Booleans"</label><br>
+                        <input type="radio" id="D1" name="A" value="answerD" required>
+                        <label for="D1"> D. "All of the above can be store in Arrays"</label><br>
                         <input class="submit1" type="submit" value="Submit" onclick="showQ2()">
                     </div>
                 </div>
-            </section>
-            <section hidden class="q2">
+            </form>
+        </section>
+        <section class="q2" hidden>
+            <form action="questions">
                 <div>
-                    2. When assigned to variables, string values must be enclosed within what? (answer is C)
-                    <div>
-                        <input type="radio" id="A2" name="A" value="answerA">
-                        <label for="A"> A. "Commas"</label><br>
+                    2. When assigned to variables, string values must be enclosed within what?
+                    <div class="answers">
+                        <input type="radio" id="A2" name="B" value="answerA">
+                        <label for="A2"> A. "Commas"</label><br>
                         <input type="radio" id="B2" name="B" value="answerB">
-                        <label for="B"> B. "Curly Brackets"</label><br>
-                        <input type="radio" id="C2" name="C" value="answerC">
-                        <label for="C"> C. "Quotation Marks"</label><br>
-                        <input type="radio" id="D2" name="D" value="answerD">
-                        <label for="D"> D. "Parenthises"</label><br>
+                        <label for="B2"> B. "Curly Brackets"</label><br>
+                        <input type="radio" id="C2" name="B" value="answerC" required>
+                        <label for="C2"> C. "Quotation Marks"</label><br>
+                        <input type="radio" id="D2" name="B" value="answerD">
+                        <label for="D2"> D. "Parenthises"</label><br>
                         <input class="submit2" type="submit" value="Submit" onclick="showQ3()">
                     </div>
                 </div>
-            </section>
-            <section hidden class="q3">
+            </form>
+        </section>
+        <section class="q3" hidden>
+            <form action="questions">
                 <div>
-                    3. Which of the following is NOT a commonly used Data Type? (answer is A)
-                    <div>
-                        <input type="radio" id="A3" name="A" value="answerA">
-                        <label for="A"> A. "Alerts"</label><br>
-                        <input type="radio" id="B3" name="B" value="answerB">
-                        <label for="B"> B. "Booleans"</label><br>
+                    3. Which of the following is NOT a commonly used Data Type?
+                    <div class="answers">
+                        <input type="radio" id="A3" name="C" value="answerA" required>
+                        <label for="A3"> A. "Alerts"</label><br>
+                        <input type="radio" id="B3" name="C" value="answerB">
+                        <label for="B3"> B. "Booleans"</label><br>
                         <input type="radio" id="C3" name="C" value="answerC">
-                        <label for="C"> C. "Strings"</label><br>
-                        <input type="radio" id="D3" name="D" value="answerD">
-                        <label for="D"> D. "Numbers"</label><br>
+                        <label for="C3"> C. "Strings"</label><br>
+                        <input type="radio" id="D3" name="C" value="answerD">
+                        <label for="D3"> D. "Numbers"</label><br>
                         <input class="submit3" type="submit" value="Submit" onclick="showQ4()">
                     </div>
                 </div>
-            </section>
-            <section hidden class="q4">
+            </form>
+        </section>
+        <section class="q4" hidden>
+            <form action="questions">
                 <div>
-                    4. Which of the following conditions are used to enclose an IF/ELSE statement? (answer is B)
-                    <div>
-                        <input type="radio" id="A4" name="A" value="answerA">
-                        <label for="A"> A. "Square Brackets"</label><br>
-                        <input type="radio" id="B4" name="B" value="answerB">
-                        <label for="B"> B. "Parenthises"</label><br>
-                        <input type="radio" id="C4" name="C" value="answerC">
-                        <label for="C"> C. "Curly Brackets"</label><br>
+                    4. Which of the following conditions are used to enclose an IF/ELSE statement?
+                    <div class="answers">
+                        <input type="radio" id="A4" name="D" value="answerA">
+                        <label for="A4"> A. "Square Brackets"</label><br>
+                        <input type="radio" id="B4" name="D" value="answerB" required>
+                        <label for="B4"> B. "Parenthises"</label><br>
+                        <input type="radio" id="C4" name="D" value="answerC">
+                        <label for="C4"> C. "Curly Brackets"</label><br>
                         <input type="radio" id="D4" name="D" value="answerD">
-                        <label for="D"> D. "Quotation Marks"</label><br>
+                        <label for="D4"> D. "Quotation Marks"</label><br>
                         <input class="submit4" type="submit" value="Submit" onclick="showQ5()">
                     </div>
                 </div>
-            </section>
-            <section hidden class="q5">
+            </form>
+        </section>
+        <section class="q5" hidden>
+            <form action="questions">
                 <div>
-                    5. What command is used to add a comment out to a single line of code in JavaScript? (answer is B)
-                    <div>
-                        <input type="radio" id="A5" name="A" value="answerA">
-                        <label for="A"> A. /* comment */</label><br>
-                        <input type="radio" id="B5" name="B" value="answerB">
-                        <label for="B"> B. // comment</label><br>
-                        <input type="radio" id="C5" name="C" value="answerC">
-                        <label for="C"> C. {* comment *}</label><br>
-                        <input type="radio" id="D5" name="D" value="answerD">
-                        <label for="D"> D. // comment //</label><br>
+                    5. What command is used to add a comment out to a single line of code in JavaScript?
+                    <div class="answers">
+                        <input type="radio" id="A5" name="E" value="answerA">
+                        <label for="A5"> A. /* comment */</label><br>
+                        <input type="radio" id="B5" name="E" value="answerB" required>
+                        <label for="B5"> B. // comment</label><br>
+                        <input type="radio" id="C5" name="E" value="answerC">
+                        <label for="C5"> C. {* comment *}</label><br>
+                        <input type="radio" id="D5" name="E" value="answerD">
+                        <label for="D5"> D. // comment //</label><br>
                         <input class="endQuiz" type="submit" value="End Quiz" onclick="endQuiz()" onclick="stopTimer()">
                     </div>
                 </div>
-            </section>
-        </form>
+            </form>
+        </section>
+        <section class="outtro" hidden>
+            <h1>CONGRATULATIONS!!!</h1>
+            <p>
+                You have completed the timed test!
+            </p>
+            <button onclick="showHighScores()" class="highscoresBtn">View High Scores</button>
+        </section>
     </main>
     <script src="./assets/myscript.js"></script>
 </body>

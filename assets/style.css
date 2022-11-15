@@ -90,37 +90,6 @@ li {
   text-align: center;
 }
 
-
-.q1 {
-  font-size: 75px;
-  justify-content: center;
-  text-align: center;
-}
-
-.q2 {
-  font-size: 75px;
-  justify-content: center;
-  text-align: center;
-}
-
-.q3 {
-  font-size: 75px;
-  justify-content: center;
-  text-align: center;
-}
-
-.q4 {
-  font-size: 75px;
-  justify-content: center;
-  text-align: center;
-}
-
-.q5 {
-  font-size: 75px;
-  justify-content: center;
-  text-align: center;
-} 
-
 .submit {
   margin: 20px;
   padding: 10px 20px;
@@ -154,3 +123,74 @@ li {
 .hidden {
   display: none;
 }
+
+.answers {
+  font-size: 25px;
+}
+
+.outtro {
+  width: 100%;
+  height: 100%;
+  margin: 20px;
+  justify-content: center;
+  text-align: center;
+}
+
+.outtro h1 {
+  margin: 20px;
+  font-size: 75px;
+  color: rgb(32, 6, 226);
+}
+
+.outtro p {
+  margin: 20px;
+  font-size: x-large;
+  padding: 25px;
+  font-weight: 400;
+}
+
+.highscoresbtn {
+  margin: 20px;
+  padding: 10px 20px;
+  border-style: none;
+  border-radius: 10px;
+  font-size: 38px;
+  background-color: rgb(32, 6, 226);
+  color: white;
+  cursor: pointer;
+}
+
+.highscoresbtn:hover {
+  background-color: rgb(0, 10, 64);
+}
+
+/*
+.q1 {
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.q2 {
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.q3 {
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.q4 {
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+}
+
+.q5 {
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+} 
