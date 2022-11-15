@@ -1,4 +1,5 @@
 const startBtn = document.querySelector(".start-btn");
+const endQuizBtn = document.querySelector(".endQuiz")
 const viewScores = document.querySelector(".highscores");
 const intro = document.querySelector(".intro");
 const start = document.querySelector(".start");
@@ -9,6 +10,10 @@ const q2 = document.querySelector(".q2");
 const q3 = document.querySelector(".q3");
 const q4 = document.querySelector(".q4");
 const q5 = document.querySelector(".q5");
+const submit1 = document.querySelector(".submit1")
+const submit2 = document.querySelector(".submit2")
+const submit3 = document.querySelector(".submit3")
+const submit4 = document.querySelector(".submit4")
 
 // This is the Timer Object 
 const timerEl = {
@@ -17,7 +22,7 @@ const timerEl = {
 }
 
 // This allows the timer to be decreased if the user answers a question incorrectly.
-function decreasetime() {
+function decreaseTime() {
   timerEl.timeRemaining -= 10;
 }
 
@@ -56,35 +61,76 @@ function myFunction() {
   intro.classList.add("hidden");
 }
 
-/*function showQ1() {
-  q1.classList.remove("hidden");
-}*/
-
 function showQ1() {
-  if (/*user checks A, B, or C, then hits submit*/) {
+  q1.classList.remove("hidden");
+}
+
+submit1.addEventListener("click", showQ2);
+
+function showQ2() {
+  if (document.getElementById("A1", "B1", "C1").checked) {
     alert("ERRT! -10 seconds! Try Again!");
-    decreasetime();
-  } else if (/*user clicks nothing and hits submit*/) {
+    decreaseTime();
+  } else if (document.getElementById("").checked) {
     alert("Hey! You gotta check at least 1 answer!");
   } else {
-    q1.classList.remove("hidden");
+    q2.classList.remove("hidden");
     alert("Hey! You got it right!");
-    /*this loads the next question*/
   }
 }
 
-function showQ2() {
-  q2.classList.remove("hidden");
-}
+submit2.addEventListener("click", showQ3);
 
 function showQ3() {
-  q3.classList.remove("hidden");
+  if (document.getElementById("A2", "B2", "D2").checked) {
+    alert("ERRT! -10 seconds! Try Again!");
+    decreaseTime();
+  } else if (document.getElementById("").checked) {
+    alert("Hey! You gotta check at least 1 answer!");
+  } else {
+    q3.classList.remove("hidden");
+    alert("Hey! You got it right!");
+  }
 }
+
+submit3.addEventListener("click", showQ4);
 
 function showQ4() {
-  q4.classList.remove("hidden");
+  if (document.getElementById("B3", "C3", "D3").checked) {
+    alert("ERRT! -10 seconds! Try Again!");
+    decreaseTime();
+  } else if (document.getElementById("").checked) {
+    alert("Hey! You gotta check at least 1 answer!");
+  } else {
+    q4.classList.remove("hidden");
+    alert("Hey! You got it right!");
+  }
 }
 
+submit4.addEventListener("click", showQ5);
+
 function showQ5() {
-  q5.classList.remove("hidden");
+  if (document.getElementById("A4", "C4", "D4").checked) {
+    alert("ERRT! -10 seconds! Try Again!");
+    decreaseTime();
+  } else if (document.getElementById("").checked) {
+    alert("Hey! You gotta check at least 1 answer!");
+  } else {
+    q5.classList.remove("hidden");
+    alert("Hey! You got it right!");
+  }
 }
+
+function finalQ() {
+  if (document.getElementById("A5", "C5", "D5").checked) {
+    alert("ERRT! -10 seconds! Try Again!");
+    decreaseTime();
+  } else if (document.getElementById("").checked) {
+    alert("Hey! You gotta check at least 1 answer!");
+  } else {
+    alert("Hey! You did it!!!");
+    stopTimer();
+  }
+}
+
+endQuizBtn.addEventListener("click", endQuiz(), finalQ());

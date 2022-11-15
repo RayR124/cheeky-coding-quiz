@@ -136,6 +136,21 @@ li {
   background-color: rgb(0, 10, 64);
 }
 
+.endQuiz {
+  margin: 20px;
+  padding: 10px 20px;
+  border-style: none;
+  border-radius: 10px;
+  font-size: 38px;
+  background-color: rgb(32, 6, 226);
+  color: white;
+  cursor: pointer;
+}
+
+.endQuiz:hover {
+  background-color: rgb(0, 10, 64);
+}
+
 .hidden {
   display: none;
 }
