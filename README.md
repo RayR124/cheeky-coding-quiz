@@ -40,7 +40,7 @@ Give the player the ability to enter their initials, then save them to localstor
 Once the player saves their highscore, show the highscores as a list on the page
 Add a link to the top left corner. When clicked, go directly to the highscore list.
 
-Here is a screenshot of the quiz home page: "./assets.Quiz-Screenshot.png"
+Here is a screenshot of the quiz home page: "https://github.com/RayR124/timed-quiz/blob/main/assets/Quiz-Screenshot.png?raw=true"
 
 I faced several challenges in the devlopement of this application, such as:
 -Discovering the complexity of using the hidden class
