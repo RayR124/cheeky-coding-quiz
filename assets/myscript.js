@@ -54,11 +54,11 @@ function myFunction() {
   startTimer();
   showQ1();
   intro.classList.add("hidden");
-};
-
-function showQ1() {
-  q1.classList.remove("hidden");
 }
+
+/*function showQ1() {
+  q1.classList.remove("hidden");
+}*/
 
 function showQ1() {
   if (/*user checks A, B, or C, then hits submit*/) {
