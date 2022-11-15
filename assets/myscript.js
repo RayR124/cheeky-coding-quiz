@@ -60,31 +60,31 @@ function showQ1() {
   q1.classList.remove("hidden");
 }
 
-//function showQ1() {
-//if (/*user checks A, B, or C, then hits submit*/) {
-//  alert("ERRT! -10 seconds! Try Again!");
-//  decreasetime();
-//} else if (/*user clicks nothing and hits submit*/) {
-//  alert("Hey! You gotta click at least 1 answer!");
-// } else {
-//   q1.classList.remove("hidden");
-//   alert("Hey! You got it right!");
-//   /*this loads the next question*/
-//}
-//}
+function showQ1() {
+  if (/*user checks A, B, or C, then hits submit*/) {
+    alert("ERRT! -10 seconds! Try Again!");
+    decreasetime();
+  } else if (/*user clicks nothing and hits submit*/) {
+    alert("Hey! You gotta check at least 1 answer!");
+  } else {
+    q1.classList.remove("hidden");
+    alert("Hey! You got it right!");
+    /*this loads the next question*/
+  }
+}
 
-//function showQ2() {
-//  q2.classList.remove("hidden");
-//}
+function showQ2() {
+  q2.classList.remove("hidden");
+}
 
-//function showQ3() {
-//  q3.classList.remove("hidden");
-//}
+function showQ3() {
+  q3.classList.remove("hidden");
+}
 
-//function showQ4() {
-//  q4.classList.remove("hidden");
-//}
+function showQ4() {
+  q4.classList.remove("hidden");
+}
 
-//function showQ5() {
-//  q5.classList.remove("hidden");
-//}
+function showQ5() {
+  q5.classList.remove("hidden");
+}
