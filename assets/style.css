@@ -27,7 +27,6 @@ li {
   margin: 20px;
   font-size: 75px;
   color: rgb(32, 6, 226);
-  display: normal;
 }
 
 .intro p {
@@ -35,7 +34,6 @@ li {
   font-size: x-large;
   padding: 25px;
   font-weight: 400;
-  display: show;
 }
 
 .start-btn {
@@ -91,33 +89,28 @@ li {
   font-weight: 600;
   justify-content: center;
   text-align: center;
-  display: normal;
 }
 
+
 .q1 {
-  display: hidden;
-  visibility: inherit;
+  display: none;
 }
 
 .q2 {
-  display: hidden;
-  visibility: inherit;
+  display: none;
 }
 
 .q3 {
-  display: hidden;
-  visibility: inherit;
+  display: none;
 }
 
 .q4 {
-  display: hidden;
-  visibility: inherit;
+  display: none;
 }
 
 .q5 {
-  display: hidden;
-  visibility: inherit;
-}
+  display: none;
+} 
 
 .submit {
   margin: 20px;
@@ -132,4 +125,8 @@ li {
 
 .submit:hover {
   background-color: rgb(0, 10, 64);
+}
+
+.hidden {
+  display: none;
 }

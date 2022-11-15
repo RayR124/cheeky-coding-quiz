@@ -23,9 +23,9 @@ function decreasetime() {
 
 // This starts the timer when the "Start Quiz" button is clicked.
 function startTimer() {
-  const seconds = 60;
+  let seconds = 60;
   function tick() {
-    let counter = document.getElementById("seconds");
+    let counter = document.querySelector(".seconds");
     seconds--;
     counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
     if (seconds > 0) {
@@ -47,14 +47,15 @@ function endQuiz() {
   timer.stopTimer();
 };
 
+// This starts the timer, hides the intro page, and displayes the first question.
 startBtn.addEventListener("click", myFunction);
 
 function myFunction() {
   startTimer();
   showQ1();
-  document.getElementById(intro).classList.add("visibility: none");
+  intro.classList.add("hidden");
 };
 
 function showQ1() {
-  document.getElementByid('q1').style.display = "show";
+  q1.classList.remove("hidden");
 }
