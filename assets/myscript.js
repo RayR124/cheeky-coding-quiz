@@ -1,6 +1,6 @@
 const startBtn = document.querySelector(".start-btn");
 const endQuizBtn = document.querySelector(".endQuiz")
-const viewScores = document.querySelector(".highScoreList");
+const viewScores = document.querySelector(".highscoreList");
 const intro = document.querySelector(".intro");
 const outtro = document.querySelector(".outtro");
 const start = document.querySelector(".start");
@@ -45,7 +45,7 @@ function endQuiz() {
 
 // This detracts 10 seconds from the timer upon a wrong answer press.
 function decreaseTime(timer) {
-  timer = timer -10;
+  timer = timer - 10;
 }
 
 // This starts the timer, hides the intro page, and displayes the first question.
@@ -64,10 +64,10 @@ function showQ1() {
 submit1.addEventListener("click", showQ2);
 
 function showQ2(event) {
-  const a1=document.getElementById("A1");
-  const b1=document.getElementById("B1");
-  const c1=document.getElementById("C1");
-  const d1=document.getElementById("D1");
+  const a1 = document.getElementById("A1");
+  const b1 = document.getElementById("B1");
+  const c1 = document.getElementById("C1");
+  const d1 = document.getElementById("D1");
   event.preventDefault();
   if (a1.checked || b1.checked || c1.checked) {
     alert("ERRT! -10 seconds! Try Again!");
@@ -84,10 +84,10 @@ function showQ2(event) {
 submit2.addEventListener("click", showQ3);
 
 function showQ3(event) {
-  const a2=document.getElementById("A2");
-  const b2=document.getElementById("B2");
-  const d2=document.getElementById("D2");
-  const c2=document.getElementById("C2");
+  const a2 = document.getElementById("A2");
+  const b2 = document.getElementById("B2");
+  const d2 = document.getElementById("D2");
+  const c2 = document.getElementById("C2");
   event.preventDefault();
   if (a2.checked || b2.checked || d2.checked) {
     alert("ERRT! -10 seconds! Try Again!");
@@ -104,10 +104,10 @@ function showQ3(event) {
 submit3.addEventListener("click", showQ4);
 
 function showQ4(event) {
-  const b3=document.getElementById("B3");
-  const c3=document.getElementById("C3");
-  const d3=document.getElementById("D3");
-  const a3=document.getElementById("A3");
+  const b3 = document.getElementById("B3");
+  const c3 = document.getElementById("C3");
+  const d3 = document.getElementById("D3");
+  const a3 = document.getElementById("A3");
   event.preventDefault();
   if (b3.checked || c3.checked || d3.checked) {
     alert("ERRT! -10 seconds! Try Again!");
@@ -124,10 +124,10 @@ function showQ4(event) {
 submit4.addEventListener("click", showQ5);
 
 function showQ5(event) {
-  const a4=document.getElementById("A4");
-  const c4=document.getElementById("C4");
-  const d4=document.getElementById("D4");
-  const b4=document.getElementById("B4");
+  const a4 = document.getElementById("A4");
+  const c4 = document.getElementById("C4");
+  const d4 = document.getElementById("D4");
+  const b4 = document.getElementById("B4");
   event.preventDefault();
   if (a4.checked || c4.checked || d4.checked) {
     alert("ERRT! -10 seconds! Try Again!");
@@ -141,13 +141,13 @@ function showQ5(event) {
   }
 }
 
-endQuizBtn.addEventListener("click", endQuiz(), finalQ());
+endQuizBtn.addEventListener("click", finalQ);
 
 function finalQ(end) {
-  const a5=document.getElementById("A5");
-  const c5=document.getElementById("C5");
-  const d5=document.getElementById("D5");
-  const b5=document.getElementById("B5");
+  const a5 = document.getElementById("A5");
+  const c5 = document.getElementById("C5");
+  const d5 = document.getElementById("D5");
+  const b5 = document.getElementById("B5");
   end.preventDefault();
   if (a5.checked || c5.checked || d5.checked) {
     alert("ERRT! -10 seconds! Try Again!");
@@ -158,7 +158,9 @@ function finalQ(end) {
     alert("Hey! You did it! You completed the quiz!!!");
     stopTimer();
     outtro.classList.remove("hidden");
+    q5.classList.add("hidden");
   }
+  endQuiz();
 }
 
 viewScores.addEventListener("click", function () {
@@ -169,7 +171,7 @@ viewScores.addEventListener("click", function () {
 function showHighScores() {
   document.querySelector(".highScoreList");
   viewScores.querySelector("ol");
-  viewScores.appendChild(score);
+  viewScores.appendChild(scores);
 
   for (const [index, item] of showHighScores.entries()) {
     const score = document.createElement("li");
