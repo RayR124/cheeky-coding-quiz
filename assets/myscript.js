@@ -16,6 +16,7 @@ const submit1 = document.querySelector(".submit1")
 const submit2 = document.querySelector(".submit2")
 const submit3 = document.querySelector(".submit3")
 const submit4 = document.querySelector(".submit4")
+const superSecret = document.querySelector(".secretScreen");
 
 // This starts the timer when the "Start Quiz" button is clicked.
 function startTimer() {
@@ -42,17 +43,18 @@ function stopTimer() {
 // This stops the timer when the final "submit" button is pressed, or when the timer hits 0.
 function endQuiz() {
   stopTimer();
-  q1.classList.add("hidden") && q2.classList.add("hidden") && q3.classList.add("hidden") && q4.classList.add("hidden") && q5.classList.add("hidden");
+  q1.classList.add("hidden") && q2.classList.add("hidden") && q3.classList.add("hidden") && q4.classList.add("hidden") && q5.classList.add("hidden") && secretScreen.classList.remove("hidden");
 };
 
 // This detracts 10 seconds from the timer upon a wrong answer press.
-function decreaseTime(seconds) {
-  setTimeout() -= 10;
+function decreaseTime() {
+  //can't figure this out yet
 }
 
 // This starts the timer, hides the intro page, and displayes the first question.
 startBtn.addEventListener("click", myFunction);
 
+// This starts the quiz and reveals the first questions.
 function myFunction() {
   startTimer();
   showQ1();
@@ -63,6 +65,7 @@ function showQ1() {
   q1.classList.remove("hidden");
 }
 
+// This hides the previous question if answered correctly and shows the next question.
 submit1.addEventListener("click", showQ2);
 
 function showQ2(event) {
@@ -83,6 +86,7 @@ function showQ2(event) {
   }
 }
 
+// This hides the previous question if answered correctly and shows the next question.
 submit2.addEventListener("click", showQ3);
 
 function showQ3(event) {
@@ -103,6 +107,7 @@ function showQ3(event) {
   }
 }
 
+// This hides the previous question if answered correctly and shows the next question.
 submit3.addEventListener("click", showQ4);
 
 function showQ4(event) {
@@ -123,6 +128,7 @@ function showQ4(event) {
   }
 }
 
+// This hides the previous question if answered correctly and shows the next question.
 submit4.addEventListener("click", showQ5);
 
 function showQ5(event) {
@@ -143,6 +149,7 @@ function showQ5(event) {
   }
 }
 
+// This hides the previous question if answered correctly and shows the outtro page.
 endQuizBtn.addEventListener("click", finalQ);
 
 function finalQ(end) {
@@ -165,9 +172,9 @@ function finalQ(end) {
   endQuiz();
 }
 
+// This logs the user's high score and displays it in a list.
 viewScores.addEventListener("click", showHighScores);
 
-// Displays Highscores
 function showHighScores() {
   document.querySelector(".highscoreList");
   viewScores.querySelector("ol");
