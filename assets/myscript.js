@@ -1,6 +1,7 @@
 const startBtn = document.querySelector(".start-btn");
 const endQuizBtn = document.querySelector(".endQuiz")
 const viewScores = document.querySelector(".highscoreList");
+const enterInitBtn = document.querySelector(".enterinitials");
 const intro = document.querySelector(".intro");
 const outtro = document.querySelector(".outtro");
 const start = document.querySelector(".start");
@@ -35,17 +36,18 @@ function startTimer() {
 
 // This stops the timer if the time remaining falls below zero, or the last question has been answered.
 function stopTimer() {
-  clearInterval(timer);
+  // inster stop timer code here when you figure it out
 }
 
 // This stops the timer when the final "submit" button is pressed, or when the timer hits 0.
 function endQuiz() {
   stopTimer();
+  q1.classList.add("hidden") && q2.classList.add("hidden") && q3.classList.add("hidden") && q4.classList.add("hidden") && q5.classList.add("hidden");
 };
 
 // This detracts 10 seconds from the timer upon a wrong answer press.
-function decreaseTime(timer) {
-  timer = timer - 10;
+function decreaseTime(seconds) {
+  setTimeout() -= 10;
 }
 
 // This starts the timer, hides the intro page, and displayes the first question.
@@ -155,25 +157,23 @@ function finalQ(end) {
   } else if (!a5.checked && !b5.checked && !c5.checked && !d5.checked) {
     alert("Hey! You gotta check at least 1 answer!");
   } else {
-    alert("Hey! You did it! You completed the quiz!!!");
-    stopTimer();
+    alert("Hey! You did it! You completed the quiz!!!"); {
     outtro.classList.remove("hidden");
     q5.classList.add("hidden");
   }
+}
   endQuiz();
 }
 
-viewScores.addEventListener("click", function () {
-  showHighScores()
-});
+viewScores.addEventListener("click", showHighScores);
 
 // Displays Highscores
 function showHighScores() {
-  document.querySelector(".highScoreList");
+  document.querySelector(".highscoreList");
   viewScores.querySelector("ol");
   viewScores.appendChild(scores);
 
-  for (const [index, item] of showHighScores.entries()) {
+  for (const [index, item] of viewScores.entries()) {
     const score = document.createElement("li");
     score.textContent = `${index + 1}. ${item.name} | Score: ${item.score}`;
     document.querySelector(".highscoreList").appendChild(score);

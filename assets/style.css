@@ -185,6 +185,7 @@ li {
   padding: 10px 20px;
   border-style: none;
   border-radius: 10px;
+  justify-content: center;
   font-size: 38px;
   background-color: rgb(32, 6, 226);
   color: white;
@@ -201,8 +202,8 @@ li {
   margin: 20px;
   font-size: large;
   font-weight: 600;
-  justify-content: left;
-  text-align: left;
+  justify-content: center;
+  text-align: center;
   cursor: pointer;
   color: red;
 }
