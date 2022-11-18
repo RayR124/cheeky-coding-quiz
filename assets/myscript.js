@@ -17,17 +17,18 @@ const submit2 = document.querySelector(".submit2")
 const submit3 = document.querySelector(".submit3")
 const submit4 = document.querySelector(".submit4")
 const superSecret = document.querySelector(".secretScreen");
+let seconds = 60;
+let gameOver = false;
 
 // This starts the timer when the "Start Quiz" button is clicked.
 function startTimer() {
-  let seconds = 60;
   function tick() {
     let counter = document.querySelector(".seconds");
     seconds--;
     counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
-    if (seconds > 0) {
+    if (!gameOver && seconds > 0) {
       setTimeout(tick, 1000);
-    } else {
+    } else if (seconds === 0) {
       alert("Time's Up!");
       endQuiz();
     }
@@ -35,20 +36,22 @@ function startTimer() {
   tick();
 }
 
-// This stops the timer if the time remaining falls below zero, or the last question has been answered.
-function stopTimer() {
-  // inster stop timer code here when you figure it out
-}
-
-// This stops the timer when the final "submit" button is pressed, or when the timer hits 0.
+// This stops the timer when the final "submit" button is pressed and logs high scores to local storage.
 function endQuiz() {
-  stopTimer();
-  q1.classList.add("hidden") && q2.classList.add("hidden") && q3.classList.add("hidden") && q4.classList.add("hidden") && q5.classList.add("hidden") && secretScreen.classList.remove("hidden");
+  q5.classList.add("hidden");
+  outtro.classList.remove("hidden");
+  const savedHighScores = JSON.parse(localStorage.getItem("initials")) || [];
+    const initials = document.getElementById("initials").value;
+    const newScore = {
+      initials,
+      score:seconds
+    }
+    localStorage.setItem("initials", JSON.stringify(savedHighScores));
 };
 
 // This detracts 10 seconds from the timer upon a wrong answer press.
 function decreaseTime() {
-  //can't figure this out yet
+  seconds -= 10;
 }
 
 // This starts the timer, hides the intro page, and displayes the first question.
@@ -165,10 +168,9 @@ function finalQ(end) {
     alert("Hey! You gotta check at least 1 answer!");
   } else {
     alert("Hey! You did it! You completed the quiz!!!"); {
-    outtro.classList.remove("hidden");
-    q5.classList.add("hidden");
+    }
   }
-}
+  gameOver = true;
   endQuiz();
 }
 
@@ -176,13 +178,6 @@ function finalQ(end) {
 viewScores.addEventListener("click", showHighScores);
 
 function showHighScores() {
-  document.querySelector(".highscoreList");
-  viewScores.querySelector("ol");
-  viewScores.appendChild(scores);
-
-  for (const [index, item] of viewScores.entries()) {
-    const score = document.createElement("li");
-    score.textContent = `${index + 1}. ${item.name} | Score: ${item.score}`;
-    document.querySelector(".highscoreList").appendChild(score);
-  };
+  intro.classList.add("hidden");
+  // add the list of scores saved to local storage displayed here
 }
