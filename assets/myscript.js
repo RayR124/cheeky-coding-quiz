@@ -6,6 +6,7 @@ const intro = document.querySelector(".intro");
 const outtro = document.querySelector(".outtro");
 const start = document.querySelector(".start");
 const quiz = document.querySelector(".quiz");
+const shameGame = document.querySelector(".shameGame");
 let timer = document.querySelector(".seconds");
 const q1 = document.querySelector(".q1");
 const q2 = document.querySelector(".q2");
@@ -28,9 +29,10 @@ function startTimer() {
     counter.innerHTML = "0:" + (seconds < 10 ? "0" : "") + String(seconds);
     if (!gameOver && seconds > 0) {
       setTimeout(tick, 1000);
-    } else if (seconds === 0) {
+    } else if (seconds === 0 || seconds < 0) {
       alert("Time's Up!");
       endQuiz();
+      showSecretScreen();
     }
   }
   tick();
@@ -46,6 +48,7 @@ function endQuiz() {
       initials,
       score:seconds
     }
+    savedHighScores.push(newScore);
     localStorage.setItem("initials", JSON.stringify(savedHighScores));
 };
 
@@ -180,4 +183,34 @@ viewScores.addEventListener("click", showHighScores);
 function showHighScores() {
   intro.classList.add("hidden");
   // add the list of scores saved to local storage displayed here
+}
+
+function showSecretScreen() {
+  intro.classList.add("hidden") || q1.classList.add("hidden") || q2.classList.add("hidden") || q3.classList.add("hidden") || q4.classList.add("hidden") || q5.classList.add("hidden") || outtro.classList.add("hidden");
+  superSecret.classList.remove("hidden");
+}
+
+const secretGame = document.querySelector(".secretGame");
+const shameBtn1 = document.querySelector(".shameBtn1");
+const shameBtn2 = document.querySelector(".shameBtn2");
+
+shameGame.addEventListener("click", showbuttons);
+
+function showbuttons() {
+ secretGame.classList.add("hidden");
+ shameBtn1.classList.remove("hidden");
+}
+
+shameBtn1.addEventListener("click", showShame2);
+
+function showShame2() {
+  shameBtn1.classList.add("hidden");
+  shameBtn2.classList.remove("hidden");
+}
+
+shameBtn2.addEventListener("click", showShame1);
+
+function showShame1() {
+  shameBtn1.classList.remove("hidden");
+  shameBtn2.classList.add("hidden");
 }
