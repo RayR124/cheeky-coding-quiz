@@ -303,6 +303,21 @@ li {
   font-weight: 400;
 }
 
+.shameGame {
+  margin: 20px;
+  padding: 10px 20px;
+  border-style: none;
+  border-radius: 10px;
+  font-size: 38px;
+  background-color: rgb(32, 6, 226);
+  color: white;
+  cursor: pointer;
+}
+
+.shameGame:hover {
+  background-color: rgb(0, 10, 64);
+}
+
 .shameBtn1 {
   margin: 20px;
   padding: 10px 20px;
@@ -331,4 +346,12 @@ li {
 
 .shameBtn2:hover {
   background-color: rgb(0, 10, 64);
+}
+
+.shameBtnA {
+  float: left;
+}
+
+.shameBtnB {
+  float: right;
 }

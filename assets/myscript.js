@@ -185,6 +185,7 @@ function showHighScores() {
   // add the list of scores saved to local storage displayed here
 }
 
+// Everything below this is just the cheeky game if the timer runs to 0
 function showSecretScreen() {
   intro.classList.add("hidden") || q1.classList.add("hidden") || q2.classList.add("hidden") || q3.classList.add("hidden") || q4.classList.add("hidden") || q5.classList.add("hidden") || outtro.classList.add("hidden");
   superSecret.classList.remove("hidden");
