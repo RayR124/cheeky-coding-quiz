@@ -47,7 +47,7 @@ function saveInit() {
     score:seconds
   }
   savedHighScores.push(newScore);
-  console.log(initials);
+  outtro.classList.add("hidden");
   localStorage.setItem("initials", JSON.stringify(savedHighScores));
   showHighScores();
 } 
