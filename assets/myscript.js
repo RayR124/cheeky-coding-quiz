@@ -1,7 +1,8 @@
 const startBtn = document.querySelector(".start-btn");
 const endQuizBtn = document.querySelector(".endQuiz")
 const viewScores = document.querySelector(".highscoreList");
-const enterInitBtn = document.querySelector(".enterinitials");
+const highscores = document.querySelector("#highscores");
+const enterInitBtn = document.querySelector(".enterInitials");
 const intro = document.querySelector(".intro");
 const outtro = document.querySelector(".outtro");
 const start = document.querySelector(".start");
@@ -38,19 +39,28 @@ function startTimer() {
   tick();
 }
 
+function saveInit() {
+  const savedHighScores = JSON.parse(localStorage.getItem("initials")) || [];
+  const initials = document.getElementById("initials").value;
+  const newScore = {
+    initials,
+    score:seconds
+  }
+  savedHighScores.push(newScore);
+  console.log(initials);
+  localStorage.setItem("initials", JSON.stringify(savedHighScores));
+  showHighScores();
+} 
+
 // This stops the timer when the final "submit" button is pressed and logs high scores to local storage.
 function endQuiz() {
   q5.classList.add("hidden");
   outtro.classList.remove("hidden");
-  const savedHighScores = JSON.parse(localStorage.getItem("initials")) || [];
-    const initials = document.getElementById("initials").value;
-    const newScore = {
-      initials,
-      score:seconds
-    }
-    savedHighScores.push(newScore);
-    localStorage.setItem("initials", JSON.stringify(savedHighScores));
+  const finalScore = document.querySelector(".finalScore");
+  finalScore.textContent = seconds;
 };
+
+enterInitBtn.addEventListener("click", saveInit);
 
 // This detracts 10 seconds from the timer upon a wrong answer press.
 function decreaseTime() {
@@ -181,8 +191,15 @@ function finalQ(end) {
 viewScores.addEventListener("click", showHighScores);
 
 function showHighScores() {
+  viewScores.innerHTML = "";
   intro.classList.add("hidden");
-  // add the list of scores saved to local storage displayed here
+  highscores.classList.remove("hidden");
+  const savedHighScores = JSON.parse(localStorage.getItem("initials")) || [];
+  for (const highScore of savedHighScores) {
+    const li = document.createElement("li");
+    li.textContent=`${highScore.initials} - ${highScore.score}`;
+    viewScores.append(li); 
+  }
 }
 
 // Everything below this is just the cheeky game if the timer runs to 0
