@@ -3,7 +3,7 @@
 ## Description
 
 My Task:
-I was challenged this week to creat a functional and timed quiz. This simple application would serve several functions, such as logging the initials of a user with the high score (the user with the most time left by the time the last question was answered) and sorting said score, a one-minute timer which would automatically end the test the moment it reached 0 if the last question had not yet been answered, and a dynamic page that would automatically load the next question as soon as the previous question was answered.
+I was challenged this week to create a functional and timed quiz. This simple application would serve several functions, such as logging the initials of a user with the high score (the user with the most time left by the time the last question was answered) and sorting said score, a one-minute timer which would automatically end the test the moment it reached 0 if the last question had not yet been answered, and a dynamic page that would automatically load the next question as soon as the previous question was answered.
 
 - I was motivated to accomplish this task by my peers, they assured me that these are skills I should have, and by creating this quiz, I proved both them, and myself, right.
 - I built this project to better my skills using mechanics I was not intimitely familiar with, such as logging items to local storage, and working with timers in HTML and JavaScript.
@@ -71,7 +71,7 @@ Add a link to the top left corner. When clicked, go directly to the highscore li
 -and the End Quiz button will stop the timer, log your score, and upon entering your initals will save the score to local storage and display it back on the web page as a new list item.
 -There is also a cheeky little game hidden in the web site... see if you can find it!
 
-    ![Alt text](https://github.com/RayR124/cheeky-coding-quiz/blob/main/assets/images/Quiz-Screenshot.png "Cheeky Coding Quiz")
+    ![image](./assets/images/Quiz-Screenshot.png "Cheeky Coding Quiz")
 
 ## Credits
 
