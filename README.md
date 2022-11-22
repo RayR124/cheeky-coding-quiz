@@ -71,7 +71,7 @@ Add a link to the top left corner. When clicked, go directly to the highscore li
 -and the End Quiz button will stop the timer, log your score, and upon entering your initals will save the score to local storage and display it back on the web page as a new list item.
 -There is also a cheeky little game hidden in the web site... see if you can find it!
 
-    ![Alt text](./assets/images/Quiz-Screenshot.png "Cheeky Coding Quiz")
+    ![Alt text](https://github.com/RayR124/cheeky-coding-quiz/blob/main/assets/images/Quiz-Screenshot.png "Cheeky Coding Quiz")
 
 ## Credits
 
