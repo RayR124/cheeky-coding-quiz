@@ -71,7 +71,7 @@ Add a link to the top left corner. When clicked, go directly to the highscore li
 -and the End Quiz button will stop the timer, log your score, and upon entering your initals will save the score to local storage and display it back on the web page as a new list item.
 -There is also a cheeky little game hidden in the web site... see if you can find it!
 
-    ![](images/Quiz-Screenshot.png)
+    ![Quiz-Screenshot](https://user-images.githubusercontent.com/112655058/203416627-7a08cfeb-1194-4cf0-8611-ccf3788a74a7.png)
 
 ## Credits
 
